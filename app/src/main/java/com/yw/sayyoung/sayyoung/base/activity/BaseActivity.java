@@ -2,16 +2,13 @@ package com.yw.sayyoung.sayyoung.base.activity;
 
 import android.support.v7.app.AppCompatDelegate;
 
-import javax.inject.Inject;
+import com.yw.sayyoung.sayyoung.R;
+import com.yw.sayyoung.sayyoung.base.presenter.AbstractPresenter;
+import com.yw.sayyoung.sayyoung.base.view.BaseView;
+import com.yw.sayyoung.sayyoung.di.component.ActivityComponent;
+import com.yw.sayyoung.sayyoung.utils.CommonUtils;
 
-import json.chao.com.wanandroid.R;
-import json.chao.com.wanandroid.app.WanAndroidApp;
-import json.chao.com.wanandroid.base.presenter.AbstractPresenter;
-import json.chao.com.wanandroid.base.view.BaseView;
-import json.chao.com.wanandroid.di.component.ActivityComponent;
-import json.chao.com.wanandroid.di.component.DaggerActivityComponent;
-import json.chao.com.wanandroid.di.module.ActivityModule;
-import json.chao.com.wanandroid.utils.CommonUtils;
+import javax.inject.Inject;
 
 /**
  * MVP模式的Base Activity
@@ -21,6 +18,7 @@ import json.chao.com.wanandroid.utils.CommonUtils;
  */
 
 public abstract class BaseActivity<T extends AbstractPresenter> extends AbstractSimpleActivity implements BaseView {
+
 
     @Inject
     protected T mPresenter;
@@ -34,10 +32,11 @@ public abstract class BaseActivity<T extends AbstractPresenter> extends Abstract
     }
 
     protected ActivityComponent getActivityComponent() {
-        return DaggerActivityComponent.builder()
-                .appComponent(WanAndroidApp.getAppComponent())
-                .activityModule(new ActivityModule(this))
-                .build();
+//        return DaggerActivityComponent.builder()
+//                .appComponent(WanAndroidApp.getAppComponent())
+//                .activityModule(new ActivityModule(this))
+//                .build();
+        return null;
     }
 
     @Override
@@ -45,7 +44,7 @@ public abstract class BaseActivity<T extends AbstractPresenter> extends Abstract
         super.onViewCreated();
         initInject();
         if (mPresenter != null) {
-            mPresenter.attachView(this);
+//            mPresenter.attachView(this);
         }
     }
 

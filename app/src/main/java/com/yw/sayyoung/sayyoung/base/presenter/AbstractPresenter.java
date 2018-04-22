@@ -1,7 +1,8 @@
 package com.yw.sayyoung.sayyoung.base.presenter;
 
+import com.yw.sayyoung.sayyoung.base.view.BaseView;
+
 import io.reactivex.disposables.Disposable;
-import json.chao.com.wanandroid.base.view.BaseView;
 
 /**
  * Presenter 基类

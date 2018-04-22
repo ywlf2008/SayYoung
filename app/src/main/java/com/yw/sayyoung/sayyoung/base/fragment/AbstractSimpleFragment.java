@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.squareup.leakcanary.RefWatcher;
+import com.yw.sayyoung.sayyoung.R;
+import com.yw.sayyoung.sayyoung.utils.CommonUtils;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;

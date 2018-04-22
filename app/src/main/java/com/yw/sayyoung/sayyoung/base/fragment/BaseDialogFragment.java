@@ -2,6 +2,12 @@ package com.yw.sayyoung.sayyoung.base.fragment;
 
 import android.os.Bundle;
 
+import com.yw.sayyoung.sayyoung.R;
+import com.yw.sayyoung.sayyoung.base.presenter.AbstractPresenter;
+import com.yw.sayyoung.sayyoung.base.view.BaseView;
+import com.yw.sayyoung.sayyoung.di.component.FragmentComponent;
+import com.yw.sayyoung.sayyoung.utils.CommonUtils;
+
 import javax.inject.Inject;
 
 import json.chao.com.wanandroid.R;

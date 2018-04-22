@@ -5,6 +5,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.yw.sayyoung.sayyoung.R;
+import com.yw.sayyoung.sayyoung.base.presenter.BasePresenter;
 
 import json.chao.com.wanandroid.R;
 import json.chao.com.wanandroid.base.presenter.BasePresenter;

@@ -4,9 +4,10 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.Toolbar;
 
+import com.yw.sayyoung.sayyoung.component.ActivityCollector;
+
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
-import json.chao.com.wanandroid.component.ActivityCollector;
 import me.yokeyword.fragmentation.SupportActivity;
 
 /**
