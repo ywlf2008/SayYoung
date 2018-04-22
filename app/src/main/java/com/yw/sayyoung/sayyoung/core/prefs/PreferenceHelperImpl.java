@@ -3,10 +3,10 @@ package com.yw.sayyoung.sayyoung.core.prefs;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import javax.inject.Inject;
+import com.yw.sayyoung.sayyoung.app.Constants;
+import com.yw.sayyoung.sayyoung.app.SayYoungApp;
 
-import json.chao.com.wanandroid.app.Constants;
-import json.chao.com.wanandroid.app.WanAndroidApp;
+import javax.inject.Inject;
 
 /**
  * @author quchao
@@ -20,7 +20,7 @@ public class PreferenceHelperImpl implements PreferenceHelper {
 
     @Inject
     PreferenceHelperImpl() {
-        mPreferences = WanAndroidApp.getInstance().getSharedPreferences(MY_SHARED_PREFERENCE, Context.MODE_PRIVATE);
+        mPreferences = SayYoungApp.getInstance().getSharedPreferences(MY_SHARED_PREFERENCE, Context.MODE_PRIVATE);
     }
 
     @Override

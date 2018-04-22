@@ -1,18 +1,19 @@
 package com.yw.sayyoung.sayyoung.core.http;
 
+import com.yw.sayyoung.sayyoung.core.bean.BannerData;
+import com.yw.sayyoung.sayyoung.core.bean.BaseResponse;
+import com.yw.sayyoung.sayyoung.core.bean.FeedArticleListData;
+import com.yw.sayyoung.sayyoung.core.bean.KnowledgeHierarchyData;
+import com.yw.sayyoung.sayyoung.core.bean.LoginData;
+import com.yw.sayyoung.sayyoung.core.bean.NavigationListData;
+import com.yw.sayyoung.sayyoung.core.bean.ProjectClassifyData;
+import com.yw.sayyoung.sayyoung.core.bean.ProjectListData;
+import com.yw.sayyoung.sayyoung.core.bean.TopSearchData;
+import com.yw.sayyoung.sayyoung.core.bean.UsefulSiteData;
+
 import java.util.List;
 
 import io.reactivex.Observable;
-import json.chao.com.wanandroid.core.bean.BaseResponse;
-import json.chao.com.wanandroid.core.bean.hierarchy.KnowledgeHierarchyData;
-import json.chao.com.wanandroid.core.bean.main.banner.BannerData;
-import json.chao.com.wanandroid.core.bean.main.collect.FeedArticleListData;
-import json.chao.com.wanandroid.core.bean.main.login.LoginData;
-import json.chao.com.wanandroid.core.bean.main.search.TopSearchData;
-import json.chao.com.wanandroid.core.bean.main.search.UsefulSiteData;
-import json.chao.com.wanandroid.core.bean.navigation.NavigationListData;
-import json.chao.com.wanandroid.core.bean.project.ProjectClassifyData;
-import json.chao.com.wanandroid.core.bean.project.ProjectListData;
 
 /**
  * @author quchao

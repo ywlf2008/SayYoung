@@ -2,9 +2,10 @@ package com.yw.sayyoung.sayyoung.di.module;
 
 import android.app.Activity;
 
+import com.yw.sayyoung.sayyoung.di.scope.ActivityScope;
+
 import dagger.Module;
 import dagger.Provides;
-import json.chao.com.wanandroid.di.scope.ActivityScope;
 
 /**
  * @author quchao

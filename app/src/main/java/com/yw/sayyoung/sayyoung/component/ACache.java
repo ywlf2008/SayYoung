@@ -8,6 +8,8 @@ import android.graphics.PixelFormat;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 
+import com.yw.sayyoung.sayyoung.app.Constants;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -32,8 +34,6 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
-
-import json.chao.com.wanandroid.app.Constants;
 
 /**
  * @author Michael Yang（www.yangfuhai.com） update at 2013.08.07

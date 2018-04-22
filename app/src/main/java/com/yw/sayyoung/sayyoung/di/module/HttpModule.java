@@ -1,5 +1,12 @@
 package com.yw.sayyoung.sayyoung.di.module;
 
+import com.yw.sayyoung.sayyoung.BuildConfig;
+import com.yw.sayyoung.sayyoung.app.Constants;
+import com.yw.sayyoung.sayyoung.core.http.api.GeeksApis;
+import com.yw.sayyoung.sayyoung.core.http.cookies.CookiesManager;
+import com.yw.sayyoung.sayyoung.di.qualifier.WanAndroidUrl;
+import com.yw.sayyoung.sayyoung.utils.CommonUtils;
+
 import java.io.File;
 import java.util.concurrent.TimeUnit;
 
@@ -7,12 +14,6 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
-import json.chao.com.wanandroid.BuildConfig;
-import json.chao.com.wanandroid.app.Constants;
-import json.chao.com.wanandroid.core.http.api.GeeksApis;
-import json.chao.com.wanandroid.core.http.cookies.CookiesManager;
-import json.chao.com.wanandroid.di.qualifier.WanAndroidUrl;
-import json.chao.com.wanandroid.utils.CommonUtils;
 import okhttp3.Cache;
 import okhttp3.CacheControl;
 import okhttp3.Interceptor;

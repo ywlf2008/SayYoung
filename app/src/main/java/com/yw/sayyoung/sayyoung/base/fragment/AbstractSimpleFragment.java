@@ -8,14 +8,12 @@ import android.view.ViewGroup;
 
 import com.squareup.leakcanary.RefWatcher;
 import com.yw.sayyoung.sayyoung.R;
+import com.yw.sayyoung.sayyoung.app.SayYoungApp;
 import com.yw.sayyoung.sayyoung.utils.CommonUtils;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import io.reactivex.disposables.CompositeDisposable;
-import json.chao.com.wanandroid.R;
-import json.chao.com.wanandroid.app.WanAndroidApp;
-import json.chao.com.wanandroid.utils.CommonUtils;
 import me.yokeyword.fragmentation.SupportFragment;
 
 /**
@@ -55,7 +53,7 @@ public abstract class AbstractSimpleFragment extends SupportFragment {
     public void onDestroy() {
         super.onDestroy();
         //LeakCanary
-        RefWatcher refWatcher = WanAndroidApp.getRefWatcher(_mActivity);
+        RefWatcher refWatcher = SayYoungApp.getRefWatcher(_mActivity);
         refWatcher.watch(this);
     }
 

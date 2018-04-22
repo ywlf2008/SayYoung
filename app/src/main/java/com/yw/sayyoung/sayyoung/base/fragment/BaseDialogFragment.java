@@ -10,15 +10,6 @@ import com.yw.sayyoung.sayyoung.utils.CommonUtils;
 
 import javax.inject.Inject;
 
-import json.chao.com.wanandroid.R;
-import json.chao.com.wanandroid.app.WanAndroidApp;
-import json.chao.com.wanandroid.base.presenter.AbstractPresenter;
-import json.chao.com.wanandroid.base.view.BaseView;
-import json.chao.com.wanandroid.di.component.DaggerFragmentComponent;
-import json.chao.com.wanandroid.di.component.FragmentComponent;
-import json.chao.com.wanandroid.di.module.FragmentModule;
-import json.chao.com.wanandroid.utils.CommonUtils;
-
 /**
  * MVP模式的Base Dialog fragment
  *
@@ -49,10 +40,11 @@ public abstract class BaseDialogFragment<T extends AbstractPresenter> extends Ab
     }
 
     public FragmentComponent getFragmentComponent() {
-        return DaggerFragmentComponent.builder()
-                .appComponent(WanAndroidApp.getAppComponent())
-                .fragmentModule(new FragmentModule(this))
-                .build();
+//        return DaggerFragmentComponent.builder()
+//                .appComponent(WanAndroidApp.getAppComponent())
+//                .fragmentModule(new FragmentModule(this))
+//                .build();
+        return null;
     }
 
     @Override

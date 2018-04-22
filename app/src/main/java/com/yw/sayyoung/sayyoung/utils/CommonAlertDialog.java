@@ -7,7 +7,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 
-import json.chao.com.wanandroid.R;
+import com.yw.sayyoung.sayyoung.R;
 
 
 /**

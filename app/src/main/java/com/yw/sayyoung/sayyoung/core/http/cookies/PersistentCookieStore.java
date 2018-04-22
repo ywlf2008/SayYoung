@@ -4,6 +4,8 @@ import android.content.SharedPreferences;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.yw.sayyoung.sayyoung.app.SayYoungApp;
+
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -16,7 +18,6 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import json.chao.com.wanandroid.app.WanAndroidApp;
 import okhttp3.Cookie;
 import okhttp3.HttpUrl;
 
@@ -33,7 +34,7 @@ public class PersistentCookieStore {
     private final SharedPreferences cookiePrefs;
 
     PersistentCookieStore() {
-        cookiePrefs = WanAndroidApp.getInstance().getSharedPreferences(COOKIE_PREFS, 0);
+        cookiePrefs = SayYoungApp.getInstance().getSharedPreferences(COOKIE_PREFS, 0);
         cookies = new HashMap<>();
 
         //将持久化的cookies缓存到内存中 即map cookies

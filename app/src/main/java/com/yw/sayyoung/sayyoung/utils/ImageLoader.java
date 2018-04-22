@@ -5,8 +5,6 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 
-import json.chao.com.wanandroid.app.WanAndroidApp;
-
 /**
  * @author quchao
  * @date 2017/11/27
@@ -22,8 +20,8 @@ public class ImageLoader {
      * @param iv imageView
      */
     public static void load(Context context, String url, ImageView iv) {
-        if (!WanAndroidApp.getAppComponent().getDataManager().getNoImageState()) {
-            Glide.with(context).load(url).into(iv);
-        }
+//        if (!WanAndroidApp.getAppComponent().getDataManager().getNoImageState()) {
+//            Glide.with(context).load(url).into(iv);
+//        }
     }
 }

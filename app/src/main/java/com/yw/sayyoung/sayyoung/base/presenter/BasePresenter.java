@@ -1,10 +1,10 @@
 package com.yw.sayyoung.sayyoung.base.presenter;
 
 import com.yw.sayyoung.sayyoung.base.view.BaseView;
+import com.yw.sayyoung.sayyoung.core.DataManager;
 
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
-import json.chao.com.wanandroid.core.DataManager;
 
 /**
  * Base Presenter
