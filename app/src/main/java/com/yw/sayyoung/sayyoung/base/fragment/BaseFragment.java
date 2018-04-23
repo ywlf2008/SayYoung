@@ -5,9 +5,12 @@ import android.support.annotation.Nullable;
 import android.view.View;
 
 import com.yw.sayyoung.sayyoung.R;
+import com.yw.sayyoung.sayyoung.app.SayYoungApp;
 import com.yw.sayyoung.sayyoung.base.presenter.AbstractPresenter;
 import com.yw.sayyoung.sayyoung.base.view.BaseView;
+import com.yw.sayyoung.sayyoung.di.component.DaggerFragmentComponent;
 import com.yw.sayyoung.sayyoung.di.component.FragmentComponent;
+import com.yw.sayyoung.sayyoung.di.module.FragmentModule;
 import com.yw.sayyoung.sayyoung.utils.CommonUtils;
 
 import javax.inject.Inject;
@@ -42,11 +45,10 @@ public abstract class BaseFragment<T extends AbstractPresenter> extends Abstract
     }
 
     public FragmentComponent getFragmentComponent() {
-//        return DaggerFragmentComponent.builder()
-//                .appComponent(WanAndroidApp.getAppComponent())
-//                .fragmentModule(new FragmentModule(this))
-//                .build();
-        return null;
+        return DaggerFragmentComponent.builder()
+                .appComponent(SayYoungApp.getAppComponent())
+                .fragmentModule(new FragmentModule(this))
+                .build();
     }
 
     @Override

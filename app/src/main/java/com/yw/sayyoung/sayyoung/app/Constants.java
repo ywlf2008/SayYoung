@@ -8,7 +8,7 @@ import java.io.File;
 
 public class Constants {
 
-    static final String  BUGLY_ID = "a29fb52485";
+    static final String  BUGLY_ID = "1b5ce5ffb6";
 
     /**
      * url

@@ -4,6 +4,7 @@ import android.app.Activity;
 
 import com.yw.sayyoung.sayyoung.di.module.FragmentModule;
 import com.yw.sayyoung.sayyoung.di.scope.FragmentScope;
+import com.yw.sayyoung.sayyoung.ui.fragment.MainPagerFragment;
 
 import dagger.Component;
 
@@ -86,11 +87,12 @@ public interface FragmentComponent {
 //     */
 //    void inject(CollectFragment collectFragment);
 //
-//    /**
-//     * 注入SettingFragment所需的依赖
-//     *
-//     * @param settingFragment SettingFragment
-//     */
-//    void inject(SettingFragment settingFragment);
+
+    /**
+     * 注入MainPagerFragment所需的依赖
+     *
+     * @param mainPagerFragment
+     */
+    void inject(MainPagerFragment mainPagerFragment);
 
 }
