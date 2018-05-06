@@ -4,6 +4,7 @@ package com.yw.sayyoung.sayyoung.core;
 import com.yw.sayyoung.sayyoung.core.bean.BannerData;
 import com.yw.sayyoung.sayyoung.core.bean.BaseResponse;
 import com.yw.sayyoung.sayyoung.core.bean.FeedArticleListData;
+import com.yw.sayyoung.sayyoung.core.bean.Goods;
 import com.yw.sayyoung.sayyoung.core.bean.KnowledgeHierarchyData;
 import com.yw.sayyoung.sayyoung.core.bean.LoginData;
 import com.yw.sayyoung.sayyoung.core.bean.NavigationListData;
@@ -11,11 +12,12 @@ import com.yw.sayyoung.sayyoung.core.bean.ProjectClassifyData;
 import com.yw.sayyoung.sayyoung.core.bean.ProjectListData;
 import com.yw.sayyoung.sayyoung.core.bean.TopSearchData;
 import com.yw.sayyoung.sayyoung.core.bean.UsefulSiteData;
+import com.yw.sayyoung.sayyoung.core.dao.HistoryData;
 import com.yw.sayyoung.sayyoung.core.db.DbHelper;
-import com.yw.sayyoung.sayyoung.core.db.HistoryData;
 import com.yw.sayyoung.sayyoung.core.http.HttpHelper;
 import com.yw.sayyoung.sayyoung.core.prefs.PreferenceHelper;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import io.reactivex.Observable;
@@ -30,11 +32,13 @@ public class DataManager implements HttpHelper, DbHelper, PreferenceHelper {
     private HttpHelper mHttpHelper;
     private DbHelper mDbHelper;
     private PreferenceHelper mPreferenceHelper;
+    private List<Goods> mShoppingList;
 
     public DataManager(HttpHelper httpHelper, DbHelper dbHelper, PreferenceHelper preferencesHelper) {
         mHttpHelper = httpHelper;
         mDbHelper = dbHelper;
         mPreferenceHelper = preferencesHelper;
+        mShoppingList = new ArrayList<>();
     }
 
     @Override
@@ -225,6 +229,10 @@ public class DataManager implements HttpHelper, DbHelper, PreferenceHelper {
     @Override
     public List<HistoryData> loadAllHistoryData() {
         return mDbHelper.loadAllHistoryData();
+    }
+
+    public List<Goods> getShoppingList(){
+        return mShoppingList;
     }
 
 }

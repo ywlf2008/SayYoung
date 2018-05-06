@@ -1,5 +1,7 @@
 package com.yw.sayyoung.sayyoung.core.db;
 
+import com.yw.sayyoung.sayyoung.core.dao.HistoryData;
+
 import java.util.List;
 
 /**

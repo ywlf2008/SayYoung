@@ -10,7 +10,7 @@ public class MainContract {
         /**
          * Show switch project
          */
-        void showBranner();
+        void showBanner();
 
         /**
          * Show switch navigation
@@ -33,6 +33,10 @@ public class MainContract {
          * @param b current night mode state
          */
         void setNightModeState(boolean b);
+
+        boolean isLogin();
+
+        void logout();
     }
 
 

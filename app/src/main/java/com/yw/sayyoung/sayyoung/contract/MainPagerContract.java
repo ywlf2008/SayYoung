@@ -2,6 +2,9 @@ package com.yw.sayyoung.sayyoung.contract;
 
 import com.yw.sayyoung.sayyoung.base.presenter.AbstractPresenter;
 import com.yw.sayyoung.sayyoung.base.view.BaseView;
+import com.yw.sayyoung.sayyoung.core.bean.Goods;
+
+import java.util.List;
 
 public class MainPagerContract {
 
@@ -10,12 +13,12 @@ public class MainPagerContract {
         /**
          * Show switch project
          */
-        void showBranner();
+        void showBanner();
 
         /**
          * Show switch navigation
          */
-        void showGoods();
+        void showGoods(List<Goods> list);
     }
 
     public interface Presenter extends AbstractPresenter<MainPagerContract.View> {
@@ -33,6 +36,9 @@ public class MainPagerContract {
          * @param b current night mode state
          */
         void setNightModeState(boolean b);
+
+        void putCart(Goods goods);
+
     }
 
 }

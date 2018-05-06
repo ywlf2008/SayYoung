@@ -61,6 +61,13 @@ public interface AbstractPresenter<T extends BaseView> {
     String getLoginAccount();
 
     /**
+     * Set login account
+     *
+     * @param account
+     */
+    void setLoginAccount(String account);
+
+    /**
      * Get current page
      *
      * @return current page

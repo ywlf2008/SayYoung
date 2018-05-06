@@ -70,6 +70,11 @@ public class BasePresenter<T extends BaseView> implements AbstractPresenter<T> {
     }
 
     @Override
+    public void setLoginAccount(String account) {
+        mDataManager.setLoginAccount(account);
+    }
+
+    @Override
     public int getCurrentPage() {
         return mDataManager.getCurrentPage();
     }

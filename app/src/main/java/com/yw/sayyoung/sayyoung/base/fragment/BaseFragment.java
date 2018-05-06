@@ -2,7 +2,9 @@ package com.yw.sayyoung.sayyoung.base.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 
 import com.yw.sayyoung.sayyoung.R;
 import com.yw.sayyoung.sayyoung.app.SayYoungApp;

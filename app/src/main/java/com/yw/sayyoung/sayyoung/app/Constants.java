@@ -129,4 +129,8 @@ public class Constants {
 
     public static final String NIGHT_MODE_STATE = "night_mode_state";
 
+    public static final int REQUEST_LOGIN = 0x01;
+    public static final int RESULT_LOGIN = 0x10;
+    public static final String EXTRA_LOGIN = "login";
+
 }

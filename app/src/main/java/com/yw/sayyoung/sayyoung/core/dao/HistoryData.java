@@ -1,4 +1,4 @@
-package com.yw.sayyoung.sayyoung.core.db;
+package com.yw.sayyoung.sayyoung.core.dao;
 
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Generated;

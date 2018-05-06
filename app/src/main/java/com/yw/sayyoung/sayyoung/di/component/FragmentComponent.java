@@ -5,6 +5,7 @@ import android.app.Activity;
 import com.yw.sayyoung.sayyoung.di.module.FragmentModule;
 import com.yw.sayyoung.sayyoung.di.scope.FragmentScope;
 import com.yw.sayyoung.sayyoung.ui.fragment.MainPagerFragment;
+import com.yw.sayyoung.sayyoung.ui.fragment.ShoppingCartFragment;
 
 import dagger.Component;
 
@@ -94,5 +95,12 @@ public interface FragmentComponent {
      * @param mainPagerFragment
      */
     void inject(MainPagerFragment mainPagerFragment);
+
+    /**
+     * 注入ShoppingCartFragment所需的依赖
+     *
+     * @param shoppingCartFragment
+     */
+    void inject(ShoppingCartFragment shoppingCartFragment);
 
 }

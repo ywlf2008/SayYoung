@@ -4,6 +4,7 @@ import android.app.Activity;
 
 import com.yw.sayyoung.sayyoung.di.module.ActivityModule;
 import com.yw.sayyoung.sayyoung.di.scope.ActivityScope;
+import com.yw.sayyoung.sayyoung.ui.activity.Login1Activity;
 import com.yw.sayyoung.sayyoung.ui.activity.MainActivity;
 
 import dagger.Component;
@@ -30,6 +31,13 @@ public interface ActivityComponent {
      * @param mainActivity MainActivity
      */
     void inject(MainActivity mainActivity);
+
+    /**
+     * 注入MAinActivity所需的依赖
+     *
+     * @param loginActivity Login1Activity
+     */
+    void inject(Login1Activity loginActivity);
 
 //    /**
 //     * 注入SplashActivity所需的依赖

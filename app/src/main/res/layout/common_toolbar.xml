@@ -5,7 +5,7 @@
     android:id="@+id/common_toolbar"
     android:layout_width="match_parent"
     android:layout_height="@dimen/dp_54"
-    android:background="@drawable/blue_gradient_bg"
+    android:background="@color/white"
     app:navigationIcon="@drawable/ic_arrow_back_white_24dp"
     app:layout_scrollFlags="scroll|enterAlways">
 
@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="@dimen/sp_16"
         tools:text="开发环境" />
 </android.support.v7.widget.Toolbar>

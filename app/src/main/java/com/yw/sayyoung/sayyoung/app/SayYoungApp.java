@@ -18,10 +18,13 @@ import com.squareup.leakcanary.RefWatcher;
 import com.tencent.bugly.crashreport.CrashReport;
 import com.yw.sayyoung.sayyoung.BuildConfig;
 import com.yw.sayyoung.sayyoung.R;
+import com.yw.sayyoung.sayyoung.core.bean.Account;
 import com.yw.sayyoung.sayyoung.core.dao.DaoMaster;
-import com.yw.sayyoung.sayyoung.core.db.DaoSession;
+import com.yw.sayyoung.sayyoung.core.dao.DaoSession;
 import com.yw.sayyoung.sayyoung.di.component.AppComponent;
-import com.yw.sayyoung.sayyoung.utils.CommonUtils;
+import com.yw.sayyoung.sayyoung.di.component.DaggerAppComponent;
+import com.yw.sayyoung.sayyoung.di.module.AppModule;
+import com.yw.sayyoung.sayyoung.di.module.HttpModule;
 import com.yw.sayyoung.sayyoung.utils.logger.TxtFormatStrategy;
 
 public class SayYoungApp extends Application{
@@ -30,6 +33,7 @@ public class SayYoungApp extends Application{
     private RefWatcher refWatcher;
     public static boolean isFirstRun;
     private static volatile AppComponent appComponent;
+    public Account mAccount;
 
     //static 代码段可以防止内存泄露, 全局设置刷新头部及尾部，优先级最低
     static {
@@ -78,10 +82,10 @@ public class SayYoungApp extends Application{
     }
 
     private void initGreenDao() {
-//        DaoMaster.DevOpenHelper devOpenHelper = new DaoMaster.DevOpenHelper(this, Constants.DB_NAME);
-//        SQLiteDatabase database = devOpenHelper.getWritableDatabase();
-//        DaoMaster daoMaster = new DaoMaster(database);
-//        mDaoSession = daoMaster.newSession();
+        DaoMaster.DevOpenHelper devOpenHelper = new DaoMaster.DevOpenHelper(this, Constants.DB_NAME);
+        SQLiteDatabase database = devOpenHelper.getWritableDatabase();
+        DaoMaster daoMaster = new DaoMaster(database);
+        mDaoSession = daoMaster.newSession();
     }
 
     public DaoSession getDaoSession() {
@@ -111,12 +115,12 @@ public class SayYoungApp extends Application{
     }
 
     public static synchronized AppComponent getAppComponent() {
-//        if (appComponent == null) {
-//            appComponent = DaggerAppComponent.builder()
-//                    .appModule(new AppModule(instance))
-//                    .httpModule(new HttpModule())
-//                    .build();
-//        }
+        if (appComponent == null) {
+            appComponent = DaggerAppComponent.builder()
+                    .appModule(new AppModule(instance))
+                    .httpModule(new HttpModule())
+                    .build();
+        }
         return appComponent;
     }
 

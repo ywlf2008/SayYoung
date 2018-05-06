@@ -8,7 +8,7 @@ import org.greenrobot.greendao.database.Database;
 import org.greenrobot.greendao.identityscope.IdentityScopeType;
 import org.greenrobot.greendao.internal.DaoConfig;
 
-import com.yw.sayyoung.sayyoung.core.db.HistoryData;
+import com.yw.sayyoung.sayyoung.core.dao.HistoryData;
 
 import com.yw.sayyoung.sayyoung.core.dao.HistoryDataDao;
 

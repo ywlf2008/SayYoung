@@ -3,9 +3,12 @@ package com.yw.sayyoung.sayyoung.base.activity;
 import android.support.v7.app.AppCompatDelegate;
 
 import com.yw.sayyoung.sayyoung.R;
+import com.yw.sayyoung.sayyoung.app.SayYoungApp;
 import com.yw.sayyoung.sayyoung.base.presenter.AbstractPresenter;
 import com.yw.sayyoung.sayyoung.base.view.BaseView;
 import com.yw.sayyoung.sayyoung.di.component.ActivityComponent;
+import com.yw.sayyoung.sayyoung.di.component.DaggerActivityComponent;
+import com.yw.sayyoung.sayyoung.di.module.ActivityModule;
 import com.yw.sayyoung.sayyoung.utils.CommonUtils;
 
 import javax.inject.Inject;
@@ -32,11 +35,10 @@ public abstract class BaseActivity<T extends AbstractPresenter> extends Abstract
     }
 
     protected ActivityComponent getActivityComponent() {
-//        return DaggerActivityComponent.builder()
-//                .appComponent(WanAndroidApp.getAppComponent())
-//                .activityModule(new ActivityModule(this))
-//                .build();
-        return null;
+        return DaggerActivityComponent.builder()
+                .appComponent(SayYoungApp.getAppComponent())
+                .activityModule(new ActivityModule(this))
+                .build();
     }
 
     @Override
@@ -44,7 +46,7 @@ public abstract class BaseActivity<T extends AbstractPresenter> extends Abstract
         super.onViewCreated();
         initInject();
         if (mPresenter != null) {
-//            mPresenter.attachView(this);
+            mPresenter.attachView(this);
         }
     }
 

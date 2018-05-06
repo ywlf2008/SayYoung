@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">SayYoung</string>
-	
-	 //Common
+
+    //Common
     <string name="http_error">network anomaly</string>
     <string name="unKnown_error">unKnown error</string>
     <string name="me">Me</string>
@@ -97,4 +97,26 @@
     <string name="setting">Setting</string>
     <string name="send_email">Select the email client:</string>
     <string name="load_more_no_data">There\'s no extra data</string>
+    <string name="shopping_cart">Shopping Cart</string>
+    <string name="spread">spread</string>
+    <string name="mine">mine</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_register">register</string>
+    <string name="password_forget">forget password?</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="username">username</string>
+    <string name="error_pws_user_incorrect">密码或者用户名不正确</string>
+    <string name="total">合计</string>
 </resources>
