@@ -6,6 +6,7 @@ import com.yw.sayyoung.sayyoung.di.module.ActivityModule;
 import com.yw.sayyoung.sayyoung.di.scope.ActivityScope;
 import com.yw.sayyoung.sayyoung.ui.activity.Login1Activity;
 import com.yw.sayyoung.sayyoung.ui.activity.MainActivity;
+import com.yw.sayyoung.sayyoung.ui.activity.OrderActivity;
 
 import dagger.Component;
 
@@ -38,6 +39,13 @@ public interface ActivityComponent {
      * @param loginActivity Login1Activity
      */
     void inject(Login1Activity loginActivity);
+
+    /**
+     * 注入MAinActivity所需的依赖
+     *
+     * @param orderActivity OrderActivity
+     */
+    void inject(OrderActivity orderActivity);
 
 //    /**
 //     * 注入SplashActivity所需的依赖

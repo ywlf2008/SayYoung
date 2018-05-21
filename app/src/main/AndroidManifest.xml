@@ -35,7 +35,8 @@
         <activity
             android:name=".ui.activity.Login1Activity"
             android:label="@string/title_activity_login" />
-        <activity android:name=".ui.activity.RegisterActivity"></activity>
+        <activity android:name=".ui.activity.RegisterActivity" />
+        <activity android:name=".ui.activity.OrderActivity"/>
     </application>
 
 </manifest>

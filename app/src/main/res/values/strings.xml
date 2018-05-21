@@ -119,4 +119,5 @@
     <string name="username">username</string>
     <string name="error_pws_user_incorrect">密码或者用户名不正确</string>
     <string name="total">合计</string>
+    <string name="total_count">共%1$s件</string>
 </resources>

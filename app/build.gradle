@@ -118,6 +118,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation "com.youth.banner:banner:1.4.10"
     implementation "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30"
+    implementation "com.scwang.smartrefresh:SmartRefreshHeader:1.0.4"
 }
 //解决支持库版本不兼容问题
 configurations.all {

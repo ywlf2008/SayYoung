@@ -41,8 +41,8 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
     Toolbar mToolbar;
     @BindView(R.id.common_toolbar_title_tv)
     TextView mTitleTv;
-    @BindView(R.id.main_floating_action_btn)
-    FloatingActionButton mFloatingActionButton;
+    //    @BindView(R.id.main_floating_action_btn)
+//    FloatingActionButton mFloatingActionButton;
     @BindView(R.id.bottom_navigation_view)
     BottomNavigationView mBottomNavigationView;
     @BindView(R.id.nav_view)
@@ -86,13 +86,13 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
     }
 
     private void switchFragment(int position) {
-        if (position >= Constants.TYPE_COLLECT) {
-            mFloatingActionButton.setVisibility(View.INVISIBLE);
-            mBottomNavigationView.setVisibility(View.INVISIBLE);
-        } else {
-            mFloatingActionButton.setVisibility(View.VISIBLE);
-            mBottomNavigationView.setVisibility(View.VISIBLE);
-        }
+//        if (position >= Constants.TYPE_COLLECT) {
+//            mFloatingActionButton.setVisibility(View.INVISIBLE);
+//            mBottomNavigationView.setVisibility(View.INVISIBLE);
+//        } else {
+//            mFloatingActionButton.setVisibility(View.VISIBLE);
+//            mBottomNavigationView.setVisibility(View.VISIBLE);
+//        }
         if (position >= mFragments.size()) {
             return;
         }
@@ -274,7 +274,7 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
 
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_main;
+        return R.layout.activity_main1;
     }
 
     @Override

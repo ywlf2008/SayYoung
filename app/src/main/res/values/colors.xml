@@ -4,7 +4,7 @@
     <color name="colorPrimary">#00abff</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="colorBackground">#EEEEEE</color>
+    <color name="colorBackground">#0D000000</color>
     <color name="colorCard">#FFFFFF</color>
     <color name="colorText">#2C2C2C</color>
     <color name="colorLogo">#FED530</color>

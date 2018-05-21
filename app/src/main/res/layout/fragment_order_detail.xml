@@ -1,10 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
     android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp">
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="usename" />
+
+        <TextView
+            android:id="@+id/tv_phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_name"
+            android:layout_alignParentEnd="true"
+            android:text="111111111" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black_90" />
 
     <com.scwang.smartrefresh.layout.SmartRefreshLayout
         android:id="@+id/normal_view"
@@ -13,23 +42,20 @@
         android:layout_weight="1"
         app:srlPrimaryColor="@color/colorPrimary">
 
-        <com.scwang.smartrefresh.header.BezierCircleHeader
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
         <android.support.v7.widget.RecyclerView
             android:id="@+id/shopping_cart_recycler_view"
-            android:paddingTop="10dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorBackground" />
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/colorBackground"
+            android:paddingTop="10dp" />
 
     </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#20000000"/>
+        android:background="#20000000" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -38,12 +64,12 @@
         android:layout_marginStart="@dimen/activity_vertical_margin">
 
         <TextView
-            android:layout_marginTop="10dp"
             android:id="@+id/tv_total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/dp_16"
-            android:text="@string/total" />
+            android:layout_marginTop="10dp"
+            android:text="@string/total"
+            android:textSize="@dimen/dp_16" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -59,14 +85,14 @@
             android:text="@string/total_count" />
 
         <TextView
-            android:id="@+id/tv_settle"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:padding="5dp"
+            android:id="@+id/tv_submit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
             android:background="@drawable/bg_conner_bottom_red"
-            android:text="去结算" />
+            android:padding="5dp"
+            android:text="提交订单" />
 
     </RelativeLayout>
 </LinearLayout>
