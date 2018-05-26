@@ -9,11 +9,11 @@ import java.util.List;
 public class OrderDetailContract {
 
     public interface View extends BaseView {
-
+        void showData(List<Goods> list);
     }
 
     public interface Presenter extends AbstractPresenter<OrderDetailContract.View> {
-
+        void getShoppingList();
     }
 
 }

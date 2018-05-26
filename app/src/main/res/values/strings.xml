@@ -120,4 +120,7 @@
     <string name="error_pws_user_incorrect">密码或者用户名不正确</string>
     <string name="total">合计</string>
     <string name="total_count">共%1$s件</string>
+    <string name="order_tip">温馨提示:\n支付完成之后会生成您的专属二维码\n请勿关闭当前页面</string>
+    <string name="price">¥%1$s</string>
+
 </resources>

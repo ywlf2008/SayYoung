@@ -1,5 +1,7 @@
 package com.yw.sayyoung.sayyoung.ui.fragment;
 
+import android.os.Bundle;
+
 import com.yw.sayyoung.sayyoung.R;
 import com.yw.sayyoung.sayyoung.base.fragment.AbstractRootFragment;
 import com.yw.sayyoung.sayyoung.contract.OrderPayContract;
@@ -11,6 +13,14 @@ public class OrderPayFragment extends AbstractRootFragment<OrderPayPresenter> im
     protected void initEventAndData() {
         super.initEventAndData();
 //        isInnerFragment = true;
+    }
+
+    public static OrderPayFragment newInstance() {
+        Bundle args = new Bundle();
+
+        OrderPayFragment fragment = new OrderPayFragment();
+        fragment.setArguments(args);
+        return fragment;
     }
 
     @Override

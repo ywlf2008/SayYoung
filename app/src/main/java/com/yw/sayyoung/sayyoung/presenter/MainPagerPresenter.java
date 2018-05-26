@@ -1,5 +1,6 @@
 package com.yw.sayyoung.sayyoung.presenter;
 
+import com.yw.sayyoung.sayyoung.app.Constants;
 import com.yw.sayyoung.sayyoung.base.presenter.BasePresenter;
 import com.yw.sayyoung.sayyoung.contract.MainPagerContract;
 import com.yw.sayyoung.sayyoung.core.DataManager;
@@ -7,6 +8,7 @@ import com.yw.sayyoung.sayyoung.core.bean.Goods;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import javax.inject.Inject;
 
@@ -28,17 +30,10 @@ public class MainPagerPresenter extends BasePresenter<MainPagerContract.View> im
     }
 
     private List<Goods> getList() {
-        String num = "";
+        Random random = new Random();
         List<Goods> list = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            if (index > 0 && index < 10) {
-                num = "00" + index;
-            } else if (index > 10) {
-                num = "0" + index;
-            } else if (index > 34) {
-                index = 0;
-            }
-            Goods goods = new Goods("https://img.onvshen.com:85/gallery/22494/18924/" + num + ".jpg", "美女" + (i + 1), 100 + i);
+            Goods goods = new Goods(Constants.IMAGE_URLS[random.nextInt(Constants.IMAGE_URLS.length)], "商品" + (i + 1), (random.nextInt(10) * 100 + random.nextInt(10)));
             index++;
             list.add(goods);
         }

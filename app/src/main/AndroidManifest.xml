@@ -36,7 +36,10 @@
             android:name=".ui.activity.Login1Activity"
             android:label="@string/title_activity_login" />
         <activity android:name=".ui.activity.RegisterActivity" />
-        <activity android:name=".ui.activity.OrderActivity"/>
+        <activity android:name=".ui.activity.ShoppingCartActivity" />
+        <activity android:name=".ui.activity.MineActivity" />
+        <activity android:name=".ui.activity.GoodsDetailActivity" />
+        <activity android:name=".ui.activity.OrderActivity"></activity>
     </application>
 
 </manifest>

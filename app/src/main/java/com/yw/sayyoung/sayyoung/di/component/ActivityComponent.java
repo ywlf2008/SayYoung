@@ -4,9 +4,11 @@ import android.app.Activity;
 
 import com.yw.sayyoung.sayyoung.di.module.ActivityModule;
 import com.yw.sayyoung.sayyoung.di.scope.ActivityScope;
+import com.yw.sayyoung.sayyoung.ui.activity.GoodsDetailActivity;
 import com.yw.sayyoung.sayyoung.ui.activity.Login1Activity;
 import com.yw.sayyoung.sayyoung.ui.activity.MainActivity;
 import com.yw.sayyoung.sayyoung.ui.activity.OrderActivity;
+import com.yw.sayyoung.sayyoung.ui.activity.ShoppingCartActivity;
 
 import dagger.Component;
 
@@ -39,6 +41,20 @@ public interface ActivityComponent {
      * @param loginActivity Login1Activity
      */
     void inject(Login1Activity loginActivity);
+
+    /**
+     * 注入MAinActivity所需的依赖
+     *
+     * @param goodsDetailActivity GoodsDetailActivity
+     */
+    void inject(GoodsDetailActivity goodsDetailActivity);
+
+    /**
+     * 注入MAinActivity所需的依赖
+     *
+     * @param shoppingCartActivity ShoppingCartActivity
+     */
+    void inject(ShoppingCartActivity shoppingCartActivity);
 
     /**
      * 注入MAinActivity所需的依赖

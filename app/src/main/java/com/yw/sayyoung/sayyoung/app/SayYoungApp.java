@@ -70,7 +70,6 @@ public class SayYoungApp extends Application{
     public void onCreate() {
         super.onCreate();
         instance = this;
-
         initGreenDao();
 
         refWatcher = LeakCanary.install(this);

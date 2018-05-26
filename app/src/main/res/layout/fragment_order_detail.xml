@@ -10,6 +10,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="80dp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/white"
         android:paddingEnd="10dp"
         android:paddingStart="10dp">
 
@@ -18,15 +20,38 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="@dimen/dp_10"
             android:text="usename" />
 
         <TextView
             android:id="@+id/tv_phone_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/tv_name"
+            android:layout_alignBottom="@+id/tv_username"
             android:layout_alignParentEnd="true"
             android:text="111111111" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/tv_username"
+            android:layout_below="@+id/tv_username"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="北京" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_address"
+            android:layout_toStartOf="@+id/tv_address" />
+
+        <ImageView
+            android:id="@+id/iv_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_address"
+            android:layout_toEndOf="@+id/tv_address" />
 
     </RelativeLayout>
 
@@ -43,10 +68,9 @@
         app:srlPrimaryColor="@color/colorPrimary">
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/shopping_cart_recycler_view"
+            android:id="@+id/recycler_view"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:background="@color/colorBackground"
             android:paddingTop="10dp" />
 
@@ -72,6 +96,7 @@
             android:textSize="@dimen/dp_16" />
 
         <TextView
+            android:id="@+id/tv_price_total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/tv_total"
@@ -79,6 +104,7 @@
             android:text="123" />
 
         <TextView
+            android:id="@+id/tv_count_total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv_total"

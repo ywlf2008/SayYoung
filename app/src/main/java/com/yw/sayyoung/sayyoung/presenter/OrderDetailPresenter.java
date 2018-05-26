@@ -7,11 +7,15 @@ import com.yw.sayyoung.sayyoung.core.DataManager;
 import javax.inject.Inject;
 
 public class OrderDetailPresenter extends BasePresenter<OrderDetailContract.View> implements OrderDetailContract.Presenter {
-    DataManager mDataManager;
 
+    DataManager mDataManager;
     @Inject
     public OrderDetailPresenter(DataManager dataManager) {
         super(dataManager);
+        this.mDataManager = dataManager;
     }
 
+    public void getShoppingList() {
+        mView.showData(mDataManager.getShoppingList());
+    }
 }

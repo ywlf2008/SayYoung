@@ -12,18 +12,17 @@ import com.yw.sayyoung.sayyoung.core.bean.Goods;
 
 import java.util.List;
 
-public class GoodsAdapter extends BaseQuickAdapter<Goods, BaseViewHolder> {
-    public GoodsAdapter(@Nullable List<Goods> data) {
-        super(R.layout.item_goods_layout, data);
+public class OrderDetailAdapter extends BaseQuickAdapter<Goods, BaseViewHolder> {
+    public OrderDetailAdapter(@Nullable List<Goods> data) {
+        super(R.layout.item_order_detail_layout, data);
     }
 
     @Override
     protected void convert(BaseViewHolder helper, Goods item) {
         helper.setText(R.id.tv_name, item.getName());
-        helper.setText(R.id.tv_price, SayYoungApp.getInstance().getResources().getString(R.string.price, String.valueOf(item.getPrice())));
+        helper.setText(R.id.tv_price, String.valueOf(item.getPrice()));
+        helper.setText(R.id.tv_count, String.valueOf(item.getCount()));
         Glide.with(SayYoungApp.getInstance()).load(item.getImgUrl()).into((ImageView) helper.getView(R.id.iv_image));
-        helper.addOnClickListener(R.id.iv_shopping);
-//        helper.addOnClickListener(R.id.iv_image);
 
     }
 }

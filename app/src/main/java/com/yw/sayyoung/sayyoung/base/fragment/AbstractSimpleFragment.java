@@ -75,14 +75,19 @@ public abstract class AbstractSimpleFragment extends SupportFragment {
                 _mActivity.finish();
                 return true;
             }
-            long currentTime = System.currentTimeMillis();
-            long time = 2000;
-            if ((currentTime - clickTime) > time) {
-                CommonUtils.showSnackMessage(_mActivity, getString(R.string.double_click_exit_tint));
-                clickTime = System.currentTimeMillis();
-            } else {
+//            long currentTime = System.currentTimeMillis();
+//            long time = 2000;
+//            if ((currentTime - clickTime) > time) {
+//                CommonUtils.showSnackMessage(_mActivity, getString(R.string.double_click_exit_tint));
+//                clickTime = System.currentTimeMillis();
+//            } else {
+//                _mActivity.finish();
+//            }
+            if(getFragmentManager().getBackStackEntryCount()<=1){
                 _mActivity.finish();
+                return true;
             }
+            pop();
         }
         return true;
     }

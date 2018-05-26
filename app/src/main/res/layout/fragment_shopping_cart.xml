@@ -15,21 +15,21 @@
 
         <com.scwang.smartrefresh.header.BezierCircleHeader
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/shopping_cart_recycler_view"
-            android:paddingTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/colorBackground" />
+            android:background="@color/colorBackground"
+            android:paddingTop="10dp" />
 
     </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#20000000"/>
+        android:background="#20000000" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -38,14 +38,15 @@
         android:layout_marginStart="@dimen/activity_vertical_margin">
 
         <TextView
-            android:layout_marginTop="10dp"
             android:id="@+id/tv_total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/dp_16"
-            android:text="@string/total" />
+            android:layout_marginTop="10dp"
+            android:text="@string/total"
+            android:textSize="@dimen/dp_16" />
 
         <TextView
+            android:id="@+id/tv_price_total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/tv_total"
@@ -53,6 +54,7 @@
             android:text="123" />
 
         <TextView
+            android:id="@+id/tv_count_total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv_total"
@@ -60,12 +62,12 @@
 
         <TextView
             android:id="@+id/tv_settle"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:padding="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
             android:background="@drawable/bg_conner_bottom_red"
+            android:padding="5dp"
             android:text="去结算" />
 
     </RelativeLayout>

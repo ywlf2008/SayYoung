@@ -1,6 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+    <com.yw.sayyoung.sayyoung.widget.SettingItem
+        android:id="@+id/si_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_5"
+        app:info_icon_visible="false"
+        app:info_key_text="订单金额"
+        app:info_value_text="$12"
+        app:info_value_visible="true" />
+
+    <com.yw.sayyoung.sayyoung.widget.SettingItem
+        android:id="@+id/si_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/si_1"
+        android:layout_marginTop="@dimen/dp_5"
+        app:info_icon_visible="false"
+        app:info_key_text="推荐人"
+        app:info_value_text="未扫码"
+        app:info_value_visible="true" />
+
+    <com.yw.sayyoung.sayyoung.widget.SettingItem
+        android:id="@+id/si_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/si_2"
+        android:layout_marginTop="@dimen/dp_5"
+        app:info_arrow_visible="false"
+        app:info_key_text="支付宝支付"
+        app:info_select_visible="true"
+        app:info_value_visible="false" />
+
+    <TextView
+        android:layout_below="@+id/si_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/order_tip" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/normal_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:srlPrimaryColor="@color/colorPrimary">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/shopping_cart_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBackground"
+            android:visibility="gone" />
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#20000000" />
+
+        <TextView
+            android:id="@+id/tv_settle"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_conner_bottom_red"
+            android:gravity="center"
+            android:text="确认支付" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

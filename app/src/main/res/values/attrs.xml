@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TitleBar">
+        <attr name="title_text" format="string" />
+        <attr name="event_text" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="SettingItem">
+        <attr name="info_key_text" format="string" />
+        <attr name="info_key_color" format="color" />
+        <attr name="info_value_text" format="string" />
+        <attr name="info_value_color" format="color" />
+        <attr name="info_icon_src" format="dimension" />
+        <attr name="info_icon_visible" format="boolean" />
+        <attr name="info_arrow_visible" format="boolean" />
+        <attr name="info_value_visible" format="boolean" />
+        <attr name="info_select_visible" format="boolean" />
+        <attr name="info_select_check" format="boolean" />
+    </declare-styleable>
+
+    <!--<declare-styleable name="InfoView">-->
+        <!--<attr name="info_key_text" format="string" />-->
+        <!--<attr name="info_key_color" format="color" />-->
+        <!--<attr name="info_value_text" format="string" />-->
+        <!--<attr name="info_value_color" format="color" />-->
+        <!--<attr name="info_lab_visible" format="boolean" />-->
+        <!--<attr name="info_line_visible" format="boolean" />-->
+    <!--</declare-styleable>-->
+
+    <declare-styleable name="SwitchView">
+        <attr name="switch_key_text" format="string" />
+        <attr name="switch_key_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="EditView">
+        <attr name="tv_lab_text" format="string" />
+        <attr name="et_content_hint" format="string" />
+        <attr name="et_content_text" format="string" />
+        <attr name="et_content_editable" format="boolean" />
+        <attr name="tv_err_tip_text" format="string" />
+        <attr name="tv_err_tip_visible" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="WaveSideBar">
+        <attr name="textColor" format="color|reference" />
+        <attr name="backgroundColor" format="color|reference" />
+        <attr name="chooseTextColor" format="color|reference" />
+        <attr name="textSize" format="dimension" />
+        <attr name="hintTextSize" format="dimension" />
+        <attr name="radius" format="dimension" />
+        <attr name="circleRadius" format="dimension" />
+    </declare-styleable>
+
+    <attr name="insideXPadding" format="dimension" />
+    <attr name="insideYPadding" format="dimension" />
+    <attr name="outsideCircleRadius" format="dimension" />
+    <attr name="insideCircleRadius" format="dimension" />
+    <attr name="ringThickness" format="dimension" />
+    <attr name="edgeThickness" format="dimension" />
+    <attr name="tickThickness" format="dimension" />
+    <attr name="tickTextSize" format="dimension" />
+    <attr name="tipsTextSize" format="dimension" />
+    <attr name="trapezoidTopLong" format="dimension" />
+    <attr name="trapezoidHeightLong" format="dimension" />
+    <attr name="currentTextSize" format="dimension" />
+    <attr name="currentUnitSize" format="dimension" />
+
+    <declare-styleable name="ProgressView">
+        <attr name="insideXPadding" />
+        <attr name="insideYPadding" />
+        <attr name="outsideCircleRadius" />
+        <attr name="insideCircleRadius" />
+        <attr name="ringThickness" />
+        <attr name="edgeThickness" />
+        <attr name="tickThickness" />
+        <attr name="tickTextSize" />
+        <attr name="tipsTextSize" />
+        <attr name="trapezoidTopLong" />
+        <attr name="trapezoidHeightLong" />
+        <attr name="currentTextSize" />
+        <attr name="currentUnitSize" />
+        <attr name="mode" format="enum">
+            <enum name="flow" value="0" />
+            <enum name="calls" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ProgressButton">
+        <attr name="insideXPadding" />
+        <attr name="insideYPadding" />
+        <attr name="outsideCircleRadius" />
+        <attr name="insideCircleRadius" />
+        <attr name="ringThickness" />
+        <attr name="edgeThickness" />
+        <attr name="tickThickness" />
+        <attr name="tickTextSize" />
+        <attr name="tipsTextSize" />
+        <attr name="trapezoidTopLong" />
+        <attr name="trapezoidHeightLong" />
+        <attr name="currentTextSize" />
+        <attr name="currentUnitSize" />
+        <attr name="centTextStatusSize" format="dimension" />
+        <attr name="switchIconRadius" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="FlowMeasurementView">
+        <attr name="progress_name" format="string" />
+        <attr name="progress_value" format="float" />
+        <attr name="progress_value_max" format="float" />
+        <attr name="progress_unit" format="string" />
+        <attr name="progress_radius" format="dimension" />
+        <attr name="progress_color_background" format="color|reference" />
+        <attr name="progress_color_outer" format="color|reference" />
+        <attr name="progress_color_inner" format="color|reference" />
+        <attr name="progress_width_background" format="dimension" />
+        <attr name="progress_width_outer" format="dimension" />
+        <attr name="progress_width_inner" format="dimension" />
+        <attr name="progress_color_text_value" format="color|reference" />
+        <attr name="progress_color_text_name" format="color|reference" />
+        <attr name="progress_color_text_scale" format="color|reference" />
+        <attr name="progress_size_text_value" format="dimension" />
+        <attr name="progress_size_text_name" format="dimension" />
+        <attr name="progress_size_text_scale" format="dimension" />
+        <attr name="progress_unit_type" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="DialPad">
+        <attr name="keysEnabled" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="DialPadKey">
+        <attr name="keyNumberText" format="string" />
+        <attr name="keyLettersText" format="string" />
+        <attr name="keyLettersSize" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomCircleView">
+        <attr name="type" format="integer" />
+    </declare-styleable>
+</resources>
