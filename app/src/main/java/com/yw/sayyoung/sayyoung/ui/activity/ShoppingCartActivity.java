@@ -36,7 +36,6 @@ public class ShoppingCartActivity extends BaseActivity<ContentPresenter> impleme
     protected void initEventAndData() {
         initToolbar();
         loadRootFragment(R.id.content_fragment, OrderDetailFragment.newInstance(),true,false);
-
     }
 
     @Override
@@ -52,6 +51,16 @@ public class ShoppingCartActivity extends BaseActivity<ContentPresenter> impleme
         mTitleTv.setText(getString(R.string.home_pager));
         StatusBarUtil.setStatusColor(getWindow(), ContextCompat.getColor(this, R.color.black_90), 1f);
         mToolbar.setNavigationOnClickListener(v -> onBackPressedSupport());
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mTitleTv.setText(getString(R.string.home_pager));
+    }
+
+    public void setToolbarTitle(String text){
+        mTitleTv.setText(text);
     }
 
 

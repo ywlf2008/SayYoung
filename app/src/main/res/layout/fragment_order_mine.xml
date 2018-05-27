@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/white">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="@dimen/dp_20"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:id="@+id/tv_nickname_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_toEndOf="@+id/profile_image"
+            android:text="昵称:" />
+
+        <TextView
+            android:id="@+id/tv_nickname_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_nickname_key"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_toEndOf="@+id/tv_nickname_key"
+            android:text="HG" />
+
+        <TextView
+            android:id="@+id/tv_member_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_nickname_key"
+            android:layout_alignStart="@+id/tv_nickname_key"
+            android:text="会员ID:" />
+
+        <TextView
+            android:id="@+id/tv_member_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_member_key"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_toEndOf="@+id/tv_member_key"
+            android:text="1118000287" />
+
+        <TextView
+            android:id="@+id/tv_recommend_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/tv_nickname_key"
+            android:layout_below="@+id/tv_nickname_key"
+            android:text="推荐人:" />
+
+        <TextView
+            android:id="@+id/tv_recommend_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_recommend_key"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_toEndOf="@+id/tv_recommend_key"
+            android:text="TT" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp_20"
+            app:srcCompat="@drawable/ic_arrows_right" />
+
+    </RelativeLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/white"
+        app:tabIndicatorColor="@color/colorAccent"
+        app:tabSelectedTextColor="@color/colorAccent">
+
+    </android.support.design.widget.TabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

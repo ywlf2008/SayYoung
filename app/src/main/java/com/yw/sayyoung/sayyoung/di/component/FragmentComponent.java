@@ -5,6 +5,8 @@ import android.app.Activity;
 import com.yw.sayyoung.sayyoung.di.module.FragmentModule;
 import com.yw.sayyoung.sayyoung.di.scope.FragmentScope;
 import com.yw.sayyoung.sayyoung.ui.fragment.MainPagerFragment;
+import com.yw.sayyoung.sayyoung.ui.fragment.MineFragment;
+import com.yw.sayyoung.sayyoung.ui.fragment.MyOrderFragment;
 import com.yw.sayyoung.sayyoung.ui.fragment.OrderDetailFragment;
 import com.yw.sayyoung.sayyoung.ui.fragment.OrderPayFragment;
 import com.yw.sayyoung.sayyoung.ui.fragment.ShoppingCartFragment;
@@ -118,5 +120,23 @@ public interface FragmentComponent {
      * @param orderPayFragment
      */
     void inject(OrderPayFragment orderPayFragment);
+
+    /**
+     * 注入OrderDetailFragment所需的依赖
+     *
+     * @param myOrderFragment
+     */
+    void inject(MyOrderFragment myOrderFragment);
+
+    /**
+     * 注入OrderDetailFragment所需的依赖
+     *
+     * @param mineFragment
+     */
+    void inject(MineFragment mineFragment);
+
+
+
+
 
 }

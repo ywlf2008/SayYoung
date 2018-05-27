@@ -34,8 +34,9 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginEnd="@dimen/activity_vertical_margin"
-        android:layout_marginStart="@dimen/activity_vertical_margin">
+        android:background="@color/white"
+        android:paddingEnd="@dimen/activity_vertical_margin"
+        android:paddingStart="@dimen/activity_vertical_margin">
 
         <TextView
             android:id="@+id/tv_total"

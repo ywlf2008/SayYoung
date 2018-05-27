@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginTop="@dimen/dp_20"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:text="HG"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_5"
+            android:text="ID:1118000287"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的利润" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的积分" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.yw.sayyoung.sayyoung.widget.SettingItem
+                android:id="@+id/si_1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                app:info_icon_visible="true"
+                app:info_key_text="我的利润"
+                app:info_value_visible="false" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_marginStart="@dimen/dp_10"
+                android:background="@color/black_90" />
+
+            <com.yw.sayyoung.sayyoung.widget.SettingItem
+                android:id="@+id/si_2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                app:info_icon_visible="true"
+                app:info_key_text="我的客户"
+                app:info_value_visible="false" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_marginStart="@dimen/dp_10"
+                android:background="@color/black_90" />
+
+            <com.yw.sayyoung.sayyoung.widget.SettingItem
+                android:id="@+id/si_3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                app:info_icon_visible="true"
+                app:info_key_text="利润汇总"
+                app:info_value_visible="false" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_marginStart="@dimen/dp_10"
+                android:background="@color/black_90" />
+
+            <com.yw.sayyoung.sayyoung.widget.SettingItem
+                android:id="@+id/si_4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                app:info_icon_visible="true"
+                app:info_key_text="加盟成为代理"
+                app:info_value_visible="false" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_marginStart="@dimen/dp_10"
+                android:background="@color/black_90" />
+
+            <com.yw.sayyoung.sayyoung.widget.SettingItem
+                android:id="@+id/si_5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                app:info_icon_visible="true"
+                app:info_key_text="我的个人商城推广二维码"
+                app:info_value_visible="false" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_marginStart="@dimen/dp_10"
+                android:background="@color/black_90" />
+
+            <com.yw.sayyoung.sayyoung.widget.SettingItem
+                android:id="@+id/si_6"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                app:info_icon_visible="true"
+                app:info_key_text="绑定账号"
+                app:info_value_visible="false" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_marginStart="@dimen/dp_10"
+                android:background="@color/black_90" />
+
+            <com.yw.sayyoung.sayyoung.widget.SettingItem
+                android:id="@+id/si_7"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                app:info_icon_visible="true"
+                app:info_key_text="快递查询"
+                app:info_value_visible="false" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

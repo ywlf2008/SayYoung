@@ -1,15 +1,21 @@
 package com.yw.sayyoung.sayyoung.ui.fragment;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
+import com.scwang.smartrefresh.layout.api.DefaultRefreshFooterCreator;
+import com.scwang.smartrefresh.layout.api.RefreshFooter;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
+import com.scwang.smartrefresh.layout.footer.ClassicsFooter;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smartrefresh.layout.listener.OnMultiPurposeListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshLoadMoreListener;
@@ -34,6 +40,8 @@ import butterknife.OnItemClick;
 public class MainPagerFragment extends AbstractRootFragment<MainPagerPresenter> implements MainPagerContract.View {
 
     private static final String TAG = MainPagerFragment.class.getSimpleName();
+    public static final int REQUEST_TYPE_REFRESH = 0;
+    public static final int REQUEST_TYPE_LOADMORE = 1;
     @BindView(R.id.banner)
     Banner mBanner;
     @BindView(R.id.main_pager_recycler_view)
@@ -43,6 +51,8 @@ public class MainPagerFragment extends AbstractRootFragment<MainPagerPresenter> 
     private List<String> images;
     private GoodsAdapter mAdapter;
     private List<Goods> mData;
+    private int mRequestType;
+    private int mCurrentPage = 0;
 
     public static MainPagerFragment getInstance(boolean param1, String param2) {
         MainPagerFragment fragment = new MainPagerFragment();
@@ -83,35 +93,54 @@ public class MainPagerFragment extends AbstractRootFragment<MainPagerPresenter> 
         mRecyclerView.addItemDecoration(new GridDividerItemDecoration(25, 0x00ffffff));
         mData = new ArrayList<>();
         mAdapter = new GoodsAdapter(mData);
-        mAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                Goods goods = mData.get(position);
-                Intent intent = new Intent(getActivity(), GoodsDetailActivity.class);
-                intent.putExtra("goods",goods);
-                startActivity(intent);
-            }
-        });
         mAdapter.setOnItemChildClickListener(new BaseQuickAdapter.OnItemChildClickListener() {
             @Override
             public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
                 Goods goods = mData.get(position);
-                mPresenter.putCart(goods);
+                switch (view.getId()) {
+                    case R.id.iv_shopping:
+                        Toast.makeText(_mActivity, "加入购物车", Toast.LENGTH_SHORT).show();
+                        mPresenter.putCart(goods);
+                        break;
+                    case R.id.iv_image:
+                        Intent intent = new Intent(getActivity(), GoodsDetailActivity.class);
+                        intent.putExtra("goods", goods);
+                        startActivity(intent);
+                        break;
+                    default:
+                        break;
+                }
+
             }
         });
         mRecyclerView.setAdapter(mAdapter);
+        mAdapter.setEnableLoadMore(false);
+        SmartRefreshLayout.setDefaultRefreshFooterCreator(new DefaultRefreshFooterCreator() {
+            @Override
+            public RefreshFooter createRefreshFooter(@NonNull Context context, @NonNull RefreshLayout layout) {
+                //指定为经典Footer，默认是 BallPulseFooter
+                return new ClassicsFooter(context).setDrawableSize(20);
+            }
+        });
         mSmartRefreshLayout.setOnRefreshLoadMoreListener(new OnRefreshLoadMoreListener() {
             @Override
             public void onRefresh(RefreshLayout refreshLayout) {
                 Log.e(TAG, "onRefresh");
+                mRequestType = REQUEST_TYPE_REFRESH;
+                mCurrentPage = 0;
+                mSmartRefreshLayout.setNoMoreData(false);
+                mPresenter.setCurrentPage(mCurrentPage);
             }
 
             @Override
             public void onLoadMore(RefreshLayout refreshLayout) {
                 Log.e(TAG, "onLoadMore");
+                mRequestType = REQUEST_TYPE_LOADMORE;
+                mCurrentPage++;
+                mPresenter.setCurrentPage(mCurrentPage);
+//                mSmartRefreshLayout.finishLoadMore(true);
             }
         });
-
         mPresenter.setCurrentPage(0);
     }
 
@@ -122,7 +151,20 @@ public class MainPagerFragment extends AbstractRootFragment<MainPagerPresenter> 
 
     @Override
     public void showGoods(List<Goods> list) {
-        mData.addAll(list);
+        if (mRequestType == REQUEST_TYPE_REFRESH) {
+            mData.clear();
+            mSmartRefreshLayout.finishRefresh(true);
+        } else {
+            if (list != null && list.size() > 0) {
+                mData.addAll(list);
+                mSmartRefreshLayout.finishLoadMore(true);
+            } else {
+                mSmartRefreshLayout.finishLoadMoreWithNoMoreData();
+            }
+        }
+        if (list != null) {
+            mData.addAll(list);
+        }
         mAdapter.notifyDataSetChanged();
     }
 

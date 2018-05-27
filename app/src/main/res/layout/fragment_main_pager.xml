@@ -18,7 +18,7 @@
         android:layout_height="match_parent"
         app:srlPrimaryColor="@color/colorPrimary">
 
-        <com.scwang.smartrefresh.header.BezierCircleHeader
+        <com.scwang.smartrefresh.header.WaterDropHeader
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_srlBackgroundColor="@color/white" />
@@ -30,8 +30,5 @@
             android:background="@color/colorBackground"
             android:visibility="visible" />
 
-        <!--<com.scwang.smartrefresh.header.MaterialHeader-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"/>-->
     </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 </LinearLayout>

@@ -12,7 +12,7 @@
     <item
         android:id="@+id/tab_knowledge_hierarchy"
         android:enabled="true"
-        android:icon="@drawable/icon_knowledge_hierarchy_not_selected"
+        android:icon="@drawable/icon_project_not_selected"
         android:title="@string/shopping_cart"
         app:showAsAction="ifRoom" />
 
@@ -20,13 +20,13 @@
         android:id="@+id/tab_navigation"
         android:enabled="true"
         android:icon="@drawable/icon_navigation_not_selected"
-        android:title="@string/spread"
+        android:title="@string/order"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/tab_project"
         android:enabled="true"
-        android:icon="@drawable/icon_project_not_selected"
+        android:icon="@drawable/icon_me_not_selected"
         android:title="@string/mine"
         app:showAsAction="ifRoom" />
 </menu>

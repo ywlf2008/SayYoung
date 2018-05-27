@@ -24,6 +24,8 @@ import com.yw.sayyoung.sayyoung.core.bean.Goods;
 import com.yw.sayyoung.sayyoung.presenter.MainPresenter;
 import com.yw.sayyoung.sayyoung.ui.fragment.ContentFragment;
 import com.yw.sayyoung.sayyoung.ui.fragment.MainPagerFragment;
+import com.yw.sayyoung.sayyoung.ui.fragment.MineFragment;
+import com.yw.sayyoung.sayyoung.ui.fragment.MyOrderFragment;
 import com.yw.sayyoung.sayyoung.ui.fragment.ShoppingCartFragment;
 import com.yw.sayyoung.sayyoung.utils.BottomNavigationViewHelper;
 import com.yw.sayyoung.sayyoung.utils.StatusBarUtil;
@@ -53,8 +55,8 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
     private ArrayList<Fragment> mFragments;
     private MainPagerFragment mMainPagerFragment;
     private ShoppingCartFragment mShoppingCartFragment;
-    private ContentFragment mSpreadFragment;
-    private ContentFragment mMineFragment;
+    private MyOrderFragment myOrderFragment;
+    private MineFragment mMineFragment;
     private int mLastFgIndex;
     private TextView mUsTv;
     private int mGoIndex = 0;
@@ -133,7 +135,7 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
                 case R.id.tab_navigation:
                     mGoIndex = 2;
                     if (isLogin()) {
-                        mTitleTv.setText(getString(R.string.spread));
+                        mTitleTv.setText(getString(R.string.order));
                         switchFragment(2);
                     } else {
                         isGoLogin = true;
@@ -227,11 +229,11 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
 
     private void initData() {
         mShoppingCartFragment = new ShoppingCartFragment();
-        mSpreadFragment = new ContentFragment();
-        mMineFragment = new ContentFragment();
+        myOrderFragment = new MyOrderFragment();
+        mMineFragment = new MineFragment();
 
         mFragments.add(mShoppingCartFragment);
-        mFragments.add(mSpreadFragment);
+        mFragments.add(myOrderFragment);
         mFragments.add(mMineFragment);
     }
 
@@ -258,8 +260,8 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
                 }
                 break;
             case Constants.TYPE_NAVIGATION:
-                if (mSpreadFragment != null) {
-                    mSpreadFragment.jumpToTheTop();
+                if (myOrderFragment != null) {
+                    myOrderFragment.jumpToTheTop();
                 }
                 break;
             case Constants.TYPE_PROJECT:

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="40dp"
+    android:layout_height="match_parent"
     android:background="@color/white"
     android:paddingEnd="@dimen/dp_10"
     android:paddingStart="@dimen/dp_10">
@@ -30,14 +31,14 @@
         android:layout_centerVertical="true"
         android:text="订单" />
 
-    <ImageView
+    <android.support.v7.widget.AppCompatImageView
         android:id="@+id/iv_arrow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/dp_24"
+        android:layout_height="@dimen/dp_24"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:src="@android:drawable/ic_media_next"
-        android:visibility="gone" />
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_arrows_right" />
 
     <android.support.v7.widget.AppCompatCheckBox
         android:id="@+id/cb_select"

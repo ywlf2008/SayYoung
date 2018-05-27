@@ -33,25 +33,28 @@ public abstract class AbstractRootFragment<T extends BasePresenter> extends Base
             return;
         }
         mNormalView = getView().findViewById(R.id.normal_view);
-        if (mNormalView == null) {
-            throw new IllegalStateException(
-                    "The subclass of RootActivity must contain a View named 'mNormalView'.");
+        if (mNormalView != null) {
+//            if (mNormalView == null) {
+//                throw new IllegalStateException(
+//                        "The subclass of RootActivity must contain a View named 'mNormalView'.");
+//            }
+            if (!(mNormalView.getParent() instanceof ViewGroup)) {
+                throw new IllegalStateException(
+                        "mNormalView's ParentView should be a ViewGroup.");
+            }
+            ViewGroup parent = (ViewGroup) mNormalView.getParent();
+            View.inflate(_mActivity, R.layout.loading_view, parent);
+            View.inflate(_mActivity, R.layout.error_view, parent);
+            mLoadingView = parent.findViewById(R.id.loading_group);
+            mErrorView = parent.findViewById(R.id.error_group);
+            TextView reloadTv = mErrorView.findViewById(R.id.error_reload_tv);
+            reloadTv.setOnClickListener(v -> reload());
+            mLoadingAnimation = mLoadingView.findViewById(R.id.loading_animation);
+            mErrorView.setVisibility(View.GONE);
+            mLoadingView.setVisibility(View.GONE);
+            mNormalView.setVisibility(View.VISIBLE);
         }
-        if (!(mNormalView.getParent() instanceof ViewGroup)) {
-            throw new IllegalStateException(
-                    "mNormalView's ParentView should be a ViewGroup.");
-        }
-        ViewGroup parent = (ViewGroup) mNormalView.getParent();
-        View.inflate(_mActivity, R.layout.loading_view, parent);
-        View.inflate(_mActivity, R.layout.error_view, parent);
-        mLoadingView = parent.findViewById(R.id.loading_group);
-        mErrorView = parent.findViewById(R.id.error_group);
-        TextView reloadTv = mErrorView.findViewById(R.id.error_reload_tv);
-        reloadTv.setOnClickListener(v -> reload());
-        mLoadingAnimation = mLoadingView.findViewById(R.id.loading_animation);
-        mErrorView.setVisibility(View.GONE);
-        mLoadingView.setVisibility(View.GONE);
-        mNormalView.setVisibility(View.VISIBLE);
+
     }
 
     @Override

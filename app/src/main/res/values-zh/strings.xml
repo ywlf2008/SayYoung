@@ -8,6 +8,7 @@
     <string name="me">我的</string>
     <string name="knowledge_hierarchy">知识体系</string>
     <string name="home_pager">首页</string>
+    <string name="order_detail">订单详情</string>
     <string name="navigation">导航</string>
     <string name="project">项目</string>
     <string name="search_tint">发现更多干货</string>
@@ -98,6 +99,7 @@
     <string name="load_more_no_data">没有多余的干货了(*≧Д≦*)</string>
     <string name="shopping_cart">购物车</string>
     <string name="spread">推广</string>
+    <string name="order">订单</string>
     <string name="mine">我的</string>
     <string name="username">用户名</string>
 

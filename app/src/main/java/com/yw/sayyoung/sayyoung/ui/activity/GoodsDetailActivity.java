@@ -49,7 +49,7 @@ public class GoodsDetailActivity extends BaseActivity<GoodsDetailPresenter> impl
         ActionBar actionBar = getSupportActionBar();
         assert actionBar != null;
         actionBar.setDisplayShowTitleEnabled(false);
-        mTitleTv.setText(getString(R.string.home_pager));
+        mTitleTv.setText(getString(R.string.order_detail));
         StatusBarUtil.setStatusColor(getWindow(), ContextCompat.getColor(this, R.color.black_90), 1f);
         mToolbar.setNavigationOnClickListener(v -> onBackPressedSupport());
     }

@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
+import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.yw.sayyoung.sayyoung.R;
 import com.yw.sayyoung.sayyoung.base.fragment.AbstractRootFragment;
 import com.yw.sayyoung.sayyoung.contract.ShoppingCartContract;
@@ -26,6 +27,8 @@ public class ShoppingCartFragment extends AbstractRootFragment<ShoppingCartPrese
     private static final String TAG = ShoppingCartFragment.class.getSimpleName();
     @BindView(R.id.shopping_cart_recycler_view)
     RecyclerView mRecyclerView;
+    @BindView(R.id.normal_view)
+    SmartRefreshLayout mSmartRefreshLayout;
     @BindView(R.id.tv_settle)
     TextView tvSettle;
     @BindView(R.id.tv_price_total)
@@ -64,6 +67,10 @@ public class ShoppingCartFragment extends AbstractRootFragment<ShoppingCartPrese
                 setTotal();
             }
         });
+        mSmartRefreshLayout.setEnableRefresh(false);
+        mSmartRefreshLayout.setEnableLoadMore(false);
+        mAdapter.setEnableLoadMore(false);
+        mAdapter.setUpFetchEnable(false);
     }
 
     @Override

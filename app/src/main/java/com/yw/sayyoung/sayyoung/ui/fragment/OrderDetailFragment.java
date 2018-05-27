@@ -12,6 +12,7 @@ import com.yw.sayyoung.sayyoung.base.fragment.AbstractRootFragment;
 import com.yw.sayyoung.sayyoung.contract.OrderDetailContract;
 import com.yw.sayyoung.sayyoung.core.bean.Goods;
 import com.yw.sayyoung.sayyoung.presenter.OrderDetailPresenter;
+import com.yw.sayyoung.sayyoung.ui.activity.ShoppingCartActivity;
 import com.yw.sayyoung.sayyoung.ui.adapter.OrderDetailAdapter;
 import com.yw.sayyoung.sayyoung.ui.adapter.ShoppingCartAdapter;
 import com.yw.sayyoung.sayyoung.widget.RecycleViewDivider;
@@ -55,6 +56,20 @@ public class OrderDetailFragment extends AbstractRootFragment<OrderDetailPresent
     @Override
     protected int getLayoutId() {
         return R.layout.fragment_order_detail;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        ((ShoppingCartActivity) _mActivity).setToolbarTitle("订单详情");
+    }
+
+    @Override
+    public void onHiddenChanged(boolean hidden) {
+        super.onHiddenChanged(hidden);
+        if (!hidden) {
+            ((ShoppingCartActivity) _mActivity).setToolbarTitle("订单详情");
+        }
     }
 
     public static OrderDetailFragment newInstance() {

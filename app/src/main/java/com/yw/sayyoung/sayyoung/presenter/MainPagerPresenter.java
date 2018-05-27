@@ -25,8 +25,13 @@ public class MainPagerPresenter extends BasePresenter<MainPagerContract.View> im
 
     @Override
     public void setCurrentPage(int page) {
-        List<Goods> list = getList();
-        mView.showGoods(list);
+        index = page;
+        if (index > 3) {
+            mView.showGoods(null);
+        }else{
+            List<Goods> list = getList();
+            mView.showGoods(list);
+        }
     }
 
     private List<Goods> getList() {

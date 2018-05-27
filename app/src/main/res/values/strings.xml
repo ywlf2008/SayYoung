@@ -8,6 +8,7 @@
     <string name="me">Me</string>
     <string name="knowledge_hierarchy">Knowledge hierarchy</string>
     <string name="home_pager">Home pager</string>
+    <string name="order_detail">Order detail</string>
     <string name="navigation">Navigation</string>
     <string name="project">Project</string>
     <string name="search_tint">Find more dry goods</string>
@@ -99,6 +100,7 @@
     <string name="load_more_no_data">There\'s no extra data</string>
     <string name="shopping_cart">Shopping Cart</string>
     <string name="spread">spread</string>
+    <string name="order">order</string>
     <string name="mine">mine</string>
     <string name="title_activity_login">Sign in</string>
 

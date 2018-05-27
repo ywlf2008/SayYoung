@@ -23,7 +23,7 @@ public class GoodsAdapter extends BaseQuickAdapter<Goods, BaseViewHolder> {
         helper.setText(R.id.tv_price, SayYoungApp.getInstance().getResources().getString(R.string.price, String.valueOf(item.getPrice())));
         Glide.with(SayYoungApp.getInstance()).load(item.getImgUrl()).into((ImageView) helper.getView(R.id.iv_image));
         helper.addOnClickListener(R.id.iv_shopping);
-//        helper.addOnClickListener(R.id.iv_image);
+        helper.addOnClickListener(R.id.iv_image);
 
     }
 }

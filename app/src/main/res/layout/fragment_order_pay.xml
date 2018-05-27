@@ -8,9 +8,10 @@
     <com.yw.sayyoung.sayyoung.widget.SettingItem
         android:id="@+id/si_1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/dp_40"
         android:layout_marginTop="@dimen/dp_5"
         app:info_icon_visible="false"
+        app:info_arrow_visible="false"
         app:info_key_text="订单金额"
         app:info_value_text="$12"
         app:info_value_visible="true" />
@@ -18,9 +19,10 @@
     <com.yw.sayyoung.sayyoung.widget.SettingItem
         android:id="@+id/si_2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/dp_40"
         android:layout_below="@+id/si_1"
         android:layout_marginTop="@dimen/dp_5"
+        app:info_arrow_visible="false"
         app:info_icon_visible="false"
         app:info_key_text="推荐人"
         app:info_value_text="未扫码"
@@ -29,7 +31,7 @@
     <com.yw.sayyoung.sayyoung.widget.SettingItem
         android:id="@+id/si_3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/dp_40"
         android:layout_below="@+id/si_2"
         android:layout_marginTop="@dimen/dp_5"
         app:info_arrow_visible="false"
@@ -38,9 +40,10 @@
         app:info_value_visible="false" />
 
     <TextView
-        android:layout_below="@+id/si_3"
+        android:layout_marginTop="@dimen/dp_10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/si_3"
         android:gravity="center"
         android:text="@string/order_tip" />
 

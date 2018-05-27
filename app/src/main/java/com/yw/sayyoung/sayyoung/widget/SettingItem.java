@@ -19,7 +19,7 @@ public class SettingItem extends RelativeLayout implements View.OnClickListener{
 
     ImageView ivIcon;
     TextView tvTitle;
-    ImageView ivLeft;
+    AppCompatImageView ivLeft;
     TextView tvValue;
     AppCompatCheckBox cbSelect;
 
@@ -50,7 +50,7 @@ public class SettingItem extends RelativeLayout implements View.OnClickListener{
         LayoutInflater.from(context).inflate(R.layout.layout_item_mine, this, true);
         ivIcon = (ImageView) findViewById(R.id.iv_icon);
         tvTitle = (TextView) findViewById(R.id.tv_title);
-        ivLeft = (ImageView) findViewById(R.id.iv_arrow);
+        ivLeft = (AppCompatImageView) findViewById(R.id.iv_arrow);
         tvValue = (TextView) findViewById(R.id.tv_value);
         cbSelect = (AppCompatCheckBox) findViewById(R.id.cb_select);
 
@@ -62,7 +62,7 @@ public class SettingItem extends RelativeLayout implements View.OnClickListener{
             isIconVisible = typedArray.getBoolean(R.styleable.SettingItem_info_icon_visible, true);
             isArrowVisible = typedArray.getBoolean(R.styleable.SettingItem_info_arrow_visible, true);
             isSelectVisible = typedArray.getBoolean(R.styleable.SettingItem_info_select_visible, false);
-            isValueVisible = typedArray.getBoolean(R.styleable.SettingItem_info_value_text, false);
+            isValueVisible = typedArray.getBoolean(R.styleable.SettingItem_info_value_visible, false);
         } finally {
             typedArray.recycle();
         }

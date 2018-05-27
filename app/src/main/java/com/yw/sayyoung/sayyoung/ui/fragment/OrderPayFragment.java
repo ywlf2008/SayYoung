@@ -6,6 +6,7 @@ import com.yw.sayyoung.sayyoung.R;
 import com.yw.sayyoung.sayyoung.base.fragment.AbstractRootFragment;
 import com.yw.sayyoung.sayyoung.contract.OrderPayContract;
 import com.yw.sayyoung.sayyoung.presenter.OrderPayPresenter;
+import com.yw.sayyoung.sayyoung.ui.activity.ShoppingCartActivity;
 
 public class OrderPayFragment extends AbstractRootFragment<OrderPayPresenter> implements OrderPayContract.View {
 
@@ -13,6 +14,12 @@ public class OrderPayFragment extends AbstractRootFragment<OrderPayPresenter> im
     protected void initEventAndData() {
         super.initEventAndData();
 //        isInnerFragment = true;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        ((ShoppingCartActivity) _mActivity).setToolbarTitle("订单支付");
     }
 
     public static OrderPayFragment newInstance() {
